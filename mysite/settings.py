@@ -97,10 +97,9 @@ ALLOWED_HOSTS = ['.scottmedwards.com']
 
 # SSL Settings
 #######
-# !!!!! RESET THESE WHEN SSL ENABLED !!!!
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 #######
 # Could also configure HSTS settings per https://www.nginx.com/blog/http-strict-transport-security-hsts-and-nginx/
 
@@ -273,7 +272,7 @@ MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
     "mezzanine.core.middleware.SitePermissionMiddleware",
     # Uncomment the following if using any of the SSL settings:
-    # "mezzanine.core.middleware.SSLRedirectMiddleware",
+    "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
 )
