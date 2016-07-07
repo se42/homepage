@@ -100,7 +100,9 @@ ALLOWED_HOSTS = ['.scottmedwards.com']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-#######
+# Mezzanine SSL Settings
+# SSL_ENABLED and SSL_FORCE_HOST are set in the Mezzanine GUI admin
+SSL_FORCED_PREFIXES_ONLY = False
 # Could also configure HSTS settings per https://www.nginx.com/blog/http-strict-transport-security-hsts-and-nginx/
 
 # Local time zone for this installation. Choices can be found here:
